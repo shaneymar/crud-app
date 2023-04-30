@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import UserTable from './tables/UserTable';
+import AddUserForm from './forms/AddUserForm';
 
 function App() {
 
@@ -10,6 +11,13 @@ function App() {
     {id:1, name: "Ram", username:"@ram@46", email:"rampgoblan@outlook.com"},
   ]
 
+  //Adding new User to Table
+  const addUser = (user) => {
+    user.id = users.length + 1;
+    setUsers([...users, user])
+  }
+
+  //setting state
   const [users, setUsers] = useState(usersData);
 
   return (
@@ -18,6 +26,7 @@ function App() {
       <div className='flex-row'>
         <div className='flex-large'>
             <h2>Add User</h2>
+            <AddUserForm addUser={addUser}/>
         </div>
         <hr />
         <div className='flex-large'>
