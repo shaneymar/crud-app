@@ -1,8 +1,4 @@
 
-body {
-  margin: 0;
-}
-
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -28,7 +24,7 @@ html {
 
 body {
   color: #404040;
-  background: white;
+  background: #f5f5f5;
   font-size: 1rem;
 }
 
