@@ -495,7 +495,12 @@ blockquote cite {
   font-size: 1rem;
   text-align: right;
 }
-
+.caution{
+  background-color: red;
+  color: #fff;
+  border-radius: 12px;
+  padding: 12px 34px;
+}
 pre {
   border: 0;
   border-radius: 4px;

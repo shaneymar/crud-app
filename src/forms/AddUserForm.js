@@ -14,7 +14,7 @@ const AddUserForm = (props) => {
     <form onSubmit={
         e => {
             e.preventDefault();
-            if(!user.name || !user.username || !user.email ) return ;
+            if(!user.name || !user.username || !user.email ) return alert("No data is added") ;
             props.addUser(user);
             setUser(initialFormState);
         }

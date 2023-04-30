@@ -17,6 +17,12 @@ function App() {
     setUsers([...users, user])
   }
 
+  //Delete User
+  const deleteUser = (id) =>{
+    setUsers(users.filter((user) => user.id!== id))
+  }
+
+
   //setting state
   const [users, setUsers] = useState(usersData);
 
@@ -31,7 +37,7 @@ function App() {
         <hr />
         <div className='flex-large'>
           <h2>View Users</h2>
-          <UserTable users={users}  />
+          <UserTable users={users}  deleteUser={deleteUser} />
         </div>
       </div>
     </div>
